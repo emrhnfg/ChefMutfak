@@ -46,7 +46,7 @@ Admin, kullanıcı siparişlerini detaylı bir şekilde görebilir. Kullanıcı 
 Admin, kullanıcı siparişlerinde değişiklik yapabilir (örneğin, yanlış eklenen bir ürünün düzeltilmesi gibi).
 
 ### 14. Sipariş Durumlarını Güncelleme
-**Açıklama:** Admin, siparişin durumunu (Hazırlanıyor, Yolda, Teslim Edildi vb.) güncelleyebilir. Kullanıcı, sipariş durumunu hesabında görebilmelidir.
+Admin, siparişin durumunu (Hazırlanıyor, Yolda, Teslim Edildi vb.) güncelleyebilir. Kullanıcı, sipariş durumunu hesabında görebilmelidir.
 
 ### 15. Kullanıcıları Görüntüleme
-**Açıklama:** Admin, sistemde kayıtlı tüm kullanıcıları görüntüleyebilir. Kullanıcı listesi, isim, e-posta, sipariş geçmişi gibi bilgileri içermelidir.
+Admin, sistemde kayıtlı tüm kullanıcıları görüntüleyebilir. Kullanıcı listesi, isim, e-posta, sipariş geçmişi gibi bilgileri içermelidir.
