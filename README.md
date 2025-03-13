@@ -19,8 +19,8 @@ Chef Mutfak
 
 # Proje Dokümantasyonu
 
-1. **Gereksinim Analizi**  
-   
+1. [Gereksinim Analizi](https://github.com/emrhnfg/ChefMutfak/blob/main/Gereksinim-Analizi.md)
+  
 2. **Durum Diyagramı**  
   
 3. **Durum Senaryoları**  
