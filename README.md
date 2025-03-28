@@ -21,7 +21,7 @@ Chef Mutfak
 
 1. [Gereksinim Analizi](https://github.com/emrhnfg/ChefMutfak/blob/main/Gereksinim-Analizi.md)
   
-2. **Durum Diyagramı**  
+2. [Durum Diyagramı](https://github.com/emrhnfg/ChefMutfak/blob/main/Durum-Diyagram%C4%B1.md)  
   
 3. **Durum Senaryoları**  
    
