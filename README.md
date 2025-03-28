@@ -23,7 +23,7 @@ Chef Mutfak
   
 2. [Durum Diyagramı](https://github.com/emrhnfg/ChefMutfak/blob/main/Durum-Diyagram%C4%B1.md)  
   
-3. **Durum Senaryoları**  
+3. [Durum Senaryoları](https://github.com/emrhnfg/ChefMutfak/blob/main/Durum-Senaryolar%C4%B1.md)  
    
 4. **Front-End**  
  
