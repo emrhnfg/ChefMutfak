@@ -42,8 +42,8 @@ Admin, menüdeki herhangi bir ürünü kaldırabilir. Silinen ürünlerin sistem
 ### 12. Siparişleri Görüntüleme
 Admin, kullanıcı siparişlerini detaylı bir şekilde görebilir. Kullanıcı adı, sipariş içeriği, toplam fiyat ve sipariş durumu gibi bilgiler listelenmelidir.
 
-### 13. Siparişleri Güncelleme
-Admin, kullanıcı siparişlerinde değişiklik yapabilir (örneğin, yanlış eklenen bir ürünün düzeltilmesi gibi).
+### 13. Ürün Güncelleme
+Admin, sistemde kayıtlı olan siparişlerin fiyatını veya içeriğini güncelleyip değiştirebilir.
 
 ### 14. Sipariş Durumlarını Güncelleme
 Admin, siparişin durumunu (Hazırlanıyor, Yolda, Teslim Edildi vb.) güncelleyebilir. Kullanıcı, sipariş durumunu hesabında görebilmelidir.
