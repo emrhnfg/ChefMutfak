@@ -4,6 +4,9 @@ Bu proje frontend kısmını ve ilgili linkleri içeriyor.
 
 **Frontend'i yayınladığım adres:** [https://chefmutfak.netlify.app/]
 
+**Admin Paneline Ulaşmak İçin:** (https://chefmutfakadmin.netlify.app)
+
+
 ## Emirhan Fatih Günay Frontend
 
 ### Kullanıcı:
