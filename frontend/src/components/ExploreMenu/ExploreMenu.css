@@ -3,7 +3,6 @@
     flex-direction: column;
     gap: 20px;
     margin-top: 90px;
-
 }
 
 .explore-menu h1 {
@@ -12,16 +11,16 @@
     font-size: 32px;
     text-align: center;
     margin-bottom: 10px;
-  }
+}
   
-  .explore-menu-text {
+.explore-menu-text {
     max-width: 60%;
-    color: #555;
+    color: #3e3d3d;
     font-size: 25px;
     line-height: 1.6;
     text-align: center;
     margin: 0 auto;
-  }
+}
 
 .explore-menu-list{
     display: flex;
@@ -37,31 +36,38 @@
     display: none;
 }
 
+.explore-menu-list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .explore-menu-list-item img{
-    width: 7.5vw;
-    min-width: 80px;
+    width: 120px;  
+    height: 120px; 
+    object-fit: cover; 
     cursor: pointer;
     border-radius: 50%;
     transition: 0.2s;
+    border: 2px solid rgb(65, 65, 65);
 }
 
 .explore-menu-list-item p{
     margin-top: 10px;
-    color: #747474;
-    font-size: max(1.4vw,16px);
+    color: #070707;
+    font-size: 16px; 
     cursor: pointer;
 }
 
 .explore-menu hr{
     margin: 10px 0px;
     height: 2px;
-    background-color: #e2e2e2;
+    background-color: #9b9a9a;
     border: none;
-
 }
 
 .explore-menu-list-item .active{
-    border: 4px solid tomato;
+    border: 4px solid rgb(0, 131, 55);
     padding: 2px;
 }
 
@@ -69,6 +75,17 @@
     .explore-menu-text{
         max-width: 100%;
         font-size: 14px;
-        
+    }
+    
+    .explore-menu-list-item img{
+        width: 100px; /* Mobil için biraz daha küçük */
+        height: 100px;
+    }
+}
+
+@media (max-width:600px) {
+    .explore-menu-list-item img{
+        width: 80px; /* Daha küçük mobil cihazlar için */
+        height: 80px;
     }
 }

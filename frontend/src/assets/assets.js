@@ -20,11 +20,11 @@ import food_5 from './tavuk_pirzola.jpg'
 import food_6 from './beyti_kebap.png'
 import food_7 from './lahmacun.png'
 import food_8 from './kiymali_pide.jpg'
-import food_9 from './food_9.png'
-import food_10 from './food_10.png'
-import food_11 from './food_11.png'
-import food_12 from './food_12.png'
-import food_13 from './food_13.png'
+import food_9 from './yayla.jpg'
+import food_10 from './elbasan_tava.jpg'
+import food_11 from './Cacik.jpg'
+import food_12 from './trileçe.jpeg'
+import food_13 from './kola.jpg'
 import food_14 from './food_14.png'
 import food_15 from './food_15.png'
 import food_16 from './food_16.png'
@@ -99,31 +99,31 @@ export const assets = {
 export const menu_list = [
     {
         menu_name: "Kebaplar",
-        menu_image: menu_1
+        menu_image: food_1
     },
     {
         menu_name: "Pide ve Lahmacun",
-        menu_image: menu_2
+        menu_image: food_7
     },
     {
         menu_name: "Çorbalar",
-        menu_image: menu_3
+        menu_image: food_9
     },
     {
         menu_name: "Sulu Yemekler",
-        menu_image: menu_4
+        menu_image: food_10
     },
     {
         menu_name: "Mezeler",
-        menu_image: menu_6
+        menu_image: food_11
     },
     {
         menu_name: "Tatlılar",
-        menu_image: menu_7
+        menu_image: food_12
     },
     {
         menu_name: "İçecekler",
-        menu_image: menu_8
+        menu_image: food_13
     }]
 
 export const food_list = [
