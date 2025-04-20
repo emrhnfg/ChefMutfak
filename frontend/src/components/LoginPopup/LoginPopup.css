@@ -1,0 +1,191 @@
+.login-popup {
+    position: fixed; /* Sayfa kaydırıldığında bile popup'ın sabit kalmasını sağlar */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Daha koyu bir arka plan */
+    display: grid;
+    place-items: center; /* İçeriği tam ortalar */
+    backdrop-filter: blur(5px); /* Arka plana blur efekti ekler */
+}
+
+.login-popup-container {
+    width: max(23vw, 330px);
+    color: #555;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    border-radius: 12px;
+    font-size: 14px;
+    animation: fadeIn 0.5s;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Gölge efekti */
+    border: 1px solid #e0e0e0; /* Hafif bir border */
+}
+
+.login-popup-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.login-popup-title img {
+    width: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.login-popup-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-popup-inputs input {
+    outline: none;
+    border: 1px solid #ddd;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-popup-inputs input:focus {
+    border-color: tomato; /* Odaklandığında border rengi değişir */
+    box-shadow: 0 0 8px rgba(255, 99, 71, 0.7); /* Hafif bir gölge efekti */
+}
+
+.login-popup-container button {
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    color: white;
+    background-color: tomato;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-popup-container button:hover {
+    background-color: #008223; /* Fare üzerine gelindiğinde renk değişimi */
+    transform: translateY(-2px); /* Hafif yukarı hareket */
+}
+
+.login-popup-container button:active {
+    transform: translateY(0); /* Butona tıklandığında hareketi sıfırla */
+}
+
+.login-popup-condition {
+    display: flex;
+    align-items: start;
+    gap: 8px;
+    margin-top: -10px;
+}
+
+.login-popup-condition input {
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.login-popup p {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+}
+
+.login-popup p span {
+    color: tomato;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.login-popup p span:hover {
+    color: #008223; /* Fare üzerine gelindiğinde renk değişimi */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+  }
+  
+  .toast {
+    min-width: 250px;
+    margin-bottom: 10px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: slideIn 0.3s, fadeOut 0.5s 2.5s forwards;
+    overflow: hidden;
+  }
+  
+  .toast.success {
+    background-color: #4CAF50;
+  }
+  
+  .toast.error {
+    background-color: #f44336;
+  }
+  
+  .toast.warning {
+    background-color: #ff9800;
+  }
+  
+  .toast.info {
+    background-color: #2196F3;
+  }
+  
+  .toast-close {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  }

@@ -1,0 +1,124 @@
+.food-detail {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.food-detail-container {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.food-detail-image {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.food-detail-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.food-detail-image img:hover {
+    transform: scale(1.05);
+}
+
+.food-detail-info {
+    flex: 1;
+    padding: 20px;
+}
+
+.food-detail-info h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.food-detail-info p {
+    margin-bottom: 15px;
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.food-detail-cart-actions {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.cart-quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    padding: 10px 15px;
+    background: #f9f9f9;
+}
+
+.quantity-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.quantity-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.quantity-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.quantity-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.quantity-display {
+    font-weight: bold;
+    min-width: 30px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.add-to-cart-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.add-to-cart-btn:active {
+    transform: translateY(0);
+}
+

@@ -1,0 +1,167 @@
+.place-order {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 100px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.place-order-left {
+    width: 100%;
+    max-width: max(30%, 500px);
+    
+}
+
+.place-order-left .title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.place-order-left input {
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline-color: #ff6347;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.place-order-left input:focus {
+    border-color: #ff6347;
+    box-shadow: 0 0 8px rgba(255, 99, 71, 0.2);
+}
+
+.place-order-left .multi-fields {
+    display: flex;
+    gap: 15px;
+}
+
+.place-order-right {
+    width: 100%;
+    max-width: max(40%, 500px);
+}
+
+.place-order .cart-total button {
+    margin-top: 30px;
+    padding: 15px 30px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.place-order .cart-total button:hover {
+    background-color: #ff4500;
+}
+/* PlaceOrder.css'e ekleyin */
+
+.error-message {
+    background-color: #ffdddd;
+    color: #d8000c;
+    border-left: 5px solid #d8000c;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .debug-info {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    max-width: 400px;
+    max-height: 300px;
+    overflow: auto;
+    z-index: 9999;
+    font-family: monospace;
+    font-size: 12px;
+  }
+  
+  .debug-info pre {
+    white-space: pre-wrap;
+    word-break: break-all;
+  }
+  
+  .debug-info button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  button.loading {
+    position: relative;
+    color: transparent;
+  }
+  
+  button.loading:after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin: -10px 0 0 -10px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  .test-button {
+    margin-top: 10px;
+    background-color: #6772e5 !important;
+  }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .place-order {
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 50px;
+    }
+
+    .place-order-left, .place-order-right {
+        max-width: 100%;
+    }
+
+    .place-order-left .title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .place-order .cart-total button {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+}
