@@ -1,0 +1,80 @@
+.profile-container {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  .profile-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+  }
+  
+  .profile-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .profile-container label {
+    font-weight: 600;
+    color: #444;
+    margin-bottom: -0.5rem;
+  }
+  
+  .profile-container input {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border 0.3s ease;
+  }
+  
+  .profile-container input:focus {
+    border-color: #646cff;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(100, 108, 255, 0.2);
+  }
+  
+  .profile-container button {
+    background-color: #646cff;
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+  }
+  
+  .profile-container button:hover {
+    background-color: #db4d00;
+  }
+  
+  .profile-container button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  .profile-container p {
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 5px;
+  }
+  
+  /* Mesaj stilleri */
+  .profile-container p[style*="Yükleniyor"] {
+    color: #666;
+  }
+  
+  .profile-container p:not([style*="Yükleniyor"]) {
+    background-color: #d3d3d3;
+    color: #333;
+    margin: 1rem 0;
+  }

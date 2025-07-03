@@ -11,6 +11,8 @@ import FoodDetail from './components/FoodDetail/FoodDetail';
 import { ToastContainer } from 'react-toastify'; 
 import 'react-toastify/dist/ReactToastify.css'; 
 import MyOrders from './pages/MyOrders/MyOrders';
+import Profile from './components/Profile/Profile'; 
+
 
 const App = () => {
 
@@ -28,6 +30,7 @@ const App = () => {
           <Route path='/verify' element={<Verify />} />
           <Route path='/food/:foodId' element={<FoodDetail />} /> 
           <Route path='/myorders' element={<MyOrders />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
         <ToastContainer />
       </div>

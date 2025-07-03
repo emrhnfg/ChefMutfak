@@ -36,7 +36,6 @@ const Navbar = ({ setShowLogin }) => {
       setIsSearching(true);
       const response = await axios.get(`http://localhost:4000/api/food/search?term=${term}`);
 
-      // Controller'da { success: true, data: foods } formatıyla döndüğü için
       if (response.data.success) {
         setFilteredFoods(response.data.data);
       } else {
@@ -50,7 +49,7 @@ const Navbar = ({ setShowLogin }) => {
       setFilteredFoods([]);
       setIsSearching(false);
     }
-  }, 300); // 300ms gecikme
+  }, 300);
 
   const handleSearch = (e) => {
     const term = e.target.value;
@@ -89,7 +88,6 @@ const Navbar = ({ setShowLogin }) => {
     navigate("/");
   };
 
-
   return (
     <div className='navbar'>
       <Link to={'/'}><img src={assets.logo1} alt="" className="logo" /></Link>
@@ -113,13 +111,13 @@ const Navbar = ({ setShowLogin }) => {
           />
           {searchTerm ? (
             <img
-              src={assets.cross_icon} // Kapatma ikonu
+              src={assets.cross_icon}
               alt="Kapat"
               className="close-icon"
               onClick={() => {
-                setSearchTerm(''); 
-                setFilteredFoods([]); 
-                setShowSearchResults(false); 
+                setSearchTerm('');
+                setFilteredFoods([]);
+                setShowSearchResults(false);
               }}
             />
           ) : (
@@ -158,22 +156,34 @@ const Navbar = ({ setShowLogin }) => {
             </div>
           )}
         </div>
+
         <div className="navbar-search-icon">
           <Link to={'/cart'}><img src={assets.basket_icon} alt="" /></Link>
           <div className={getTotalCartAmount() === 0 ? "" : "dot"}></div>
         </div>
-        {!token ?
-          <button onClick={() => setShowLogin(true)}>Kayıt Ol</button>
-          :
+
+        {!token ? (
+          <button onClick={() => setShowLogin(true)}>Giriş Yap</button>
+        ) : (
           <div className='navbar-profile'>
             <img src={assets.profile_icon} alt="" />
             <ul className="nav-profile-dropdown">
-              <li onClick={()=>navigate('/myorders')}><img src={assets.bag_icon} alt="" /><p>Siparişlerim</p></li>
+              <li onClick={() => navigate('/myorders')}>
+                <img src={assets.bag_icon} alt="" />
+                <p>Siparişlerim</p>
+              </li>
+              <li onClick={() => navigate('/profile')}>
+                <img src={assets.profile_icon} alt="" />
+                <p>Profilim</p>
+              </li>
               <hr />
-              <li onClick={logout}><img src={assets.logout_icon} alt="" /><p>Çıkış Yap</p></li>
+              <li onClick={logout}>
+                <img src={assets.logout_icon} alt="" />
+                <p>Çıkış Yap</p>
+              </li>
             </ul>
           </div>
-        }
+        )}
       </div>
     </div>
   );
