@@ -10,6 +10,7 @@ const Users = ({ url }) => {
 
     const fetchAllUsers = async () => {
         try {
+            // Backend'den gelen kullanıcı listesini kontrol edelim
             const response = await axios.get(`${url}/api/user/admin/all`);
             if (response.data.success) {
                 setUsers(response.data.data);
@@ -26,7 +27,7 @@ const Users = ({ url }) => {
 
     useEffect(() => {
         fetchAllUsers();
-    }, []);
+    }, [url]); // url prop'unu da bağımlılık olarak eklemek daha iyi bir pratiktir.
 
     // Arama fonksiyonu
     const filteredUsers = users.filter(user =>
@@ -77,7 +78,7 @@ const Users = ({ url }) => {
                                 <div className="table-cell">
                                     <div className="user-info">
                                         <div className="user-avatar">
-                                            {user.name.charAt(0).toUpperCase()}
+                                            {user.name ? user.name.charAt(0).toUpperCase() : 'U'} {/* user.name null/undefined ise 'U' göster */}
                                         </div>
                                         <div className="user-details">
                                             <p className="user-name">{user.name}</p>
@@ -90,16 +91,19 @@ const Users = ({ url }) => {
                                 </div>
                                 <div className="table-cell">
                                     <div className="order-info">
-                                        <span className="order-count">{user.orderCount}</span>
+                                        <span className="order-count">{user.orderCount || 0}</span> {/* orderCount yoksa 0 göster */}
                                         <span className="order-text">sipariş</span>
                                     </div>
                                 </div>
                                 <div className="table-cell">
-                                    <span className="total-spent">${user.totalSpent.toFixed(2)}</span>
+                                    <span className="total-spent">${user.totalSpent ? user.totalSpent.toFixed(2) : '0.00'}</span> {/* totalSpent yoksa 0.00 göster */}
                                 </div>
                                 <div className="table-cell">
                                     <span className="join-date">
-                                        {new Date(user.createdAt).toLocaleDateString('tr-TR')}
+                                        {/* Burası Kayıt Tarihi kısmı - KONTROL ETTİK */}
+                                        {user.createdAt ?
+                                            new Date(user.createdAt).toLocaleDateString('tr-TR')
+                                            : 'Tarih Yok'} {/* Eğer createdAt yoksa 'Tarih Yok' yaz */}
                                     </span>
                                 </div>
                             </div>
