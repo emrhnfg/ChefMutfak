@@ -6,7 +6,8 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 // Kullanıcı siparişi oluşturma (frontend için)
 const placeOrder = async (req, res) => {
-    const frontend_url = "http://localhost:5173";
+    // FRONTEND URL'sini ortam değişkeninden al
+    const frontend_url = process.env.FRONTEND_URL; 
 
     try {
         const newOrder = new orderModel({
@@ -21,7 +22,7 @@ const placeOrder = async (req, res) => {
 
         const line_items = req.body.items.map((item) => ({
             price_data: {
-                currency: "usd",
+                currency: "try", 
                 product_data: { name: item.name },
                 unit_amount: item.price * 100
             },
@@ -30,9 +31,9 @@ const placeOrder = async (req, res) => {
 
         line_items.push({
             price_data: {
-                currency: "usd",
+                currency: "usd", // Eğer TRY kullanıyorsanız "try" olarak güncelleyin
                 product_data: { name: "Teslimat Ücreti" },
-                unit_amount: 2 * 100
+                unit_amount: 2 * 100 // Teslimat ücreti 2 USD olarak ayarlandı
             },
             quantity: 1
         });
@@ -40,6 +41,7 @@ const placeOrder = async (req, res) => {
         const session = await stripe.checkout.sessions.create({
             line_items: line_items,
             mode: 'payment',
+            // success_url ve cancel_url'yi dinamik olarak frontend_url'den alıyoruz
             success_url: `${frontend_url}/verify?success=true&orderId=${newOrder._id}`,
             cancel_url: `${frontend_url}/verify?success=false&orderId=${newOrder._id}`,
         });
