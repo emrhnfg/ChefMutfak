@@ -1,6 +1,6 @@
 # Back-End Dokümantasyonu
 
-Domain Adresi: domainadresi.com
+Domain Adresi: https://chefmutfak.netlify.app/
 
 Docker: Kullanılmadı.
 
