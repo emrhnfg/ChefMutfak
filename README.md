@@ -9,7 +9,7 @@ E-Ticaret - Yemek Sipariş Sistemi
 [Köfteci Yusuf](https://www.kofteciyusuf.com.tr/)
 
 ## Uygulama Adresi
-[chefmutfak.com](http://chefmutfak.com) (Link henüz geçerli değil)
+https://chefmutfak.netlify.app
 
 ## Grup Adı
 Chef Mutfak 
