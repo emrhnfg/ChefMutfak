@@ -7,7 +7,8 @@ import axios from 'axios';
 
 const Navbar = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("menu");
-  const { getTotalCartAmount, token, setToken } = useContext(StoreContext);
+  // StoreContext'ten 'url' değişkenini buraya ekledik
+  const { getTotalCartAmount, token, setToken, url } = useContext(StoreContext); 
   const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredFoods, setFilteredFoods] = useState([]);
@@ -34,7 +35,8 @@ const Navbar = ({ setShowLogin }) => {
 
     try {
       setIsSearching(true);
-      const response = await axios.get(`http://localhost:4000/api/food/search?term=${term}`);
+      // Buradaki URL'i 'url' değişkeni ile değiştirdik
+      const response = await axios.get(`${url}/api/food/search?term=${term}`);
 
       if (response.data.success) {
         setFilteredFoods(response.data.data);
@@ -140,7 +142,8 @@ const Navbar = ({ setShowLogin }) => {
                     onClick={() => handleFoodClick(food._id)}
                   >
                     <img
-                      src={food.image.startsWith('http') ? food.image : `http://localhost:4000/images/${food.image}`}
+                      // Resim URL'ini de güncelledik, 'url' değişkenini kullanıyoruz
+                      src={food.image.startsWith('http') ? food.image : `${url}/images/${food.image}`}
                       alt={food.name}
                       className="search-food-img"
                     />
