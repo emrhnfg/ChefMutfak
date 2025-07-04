@@ -29,6 +29,7 @@ Chef Mutfak
 
 5. [Back-End](https://github.com/emrhnfg/ChefMutfak/blob/main/backend.md)    
   
-6. **Video Sunum**  
+6. [Video Sunum](https://github.com/emrhnfg/ChefMutfak/blob/main/videosunum.md)
+  
    
 
